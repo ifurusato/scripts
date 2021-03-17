@@ -2,6 +2,11 @@
 
 * **pin_check.py**:  displays a continually-updating console display showing the status of a Raspberry Pi 3 B+'s pins.
 * **pink_led.py**:   grabs a snapshot of a 640x480 Raspberry Pi camera and compares the 'color distance' between each pixel and a fixed color, displaying the result to the console.
+* **scanip**:        scans the local network for IP addresses matching 192.168.1.*
+* **findpy**:        a command line search tool that looks for strings within *.py files and provides a colorized report
+* **findxml**:       a command line search tool that looks for strings within *.xml files and provides a colorized report
+
+The two find* files are basically Python simplifying wrappers around the unix "find" command, that provide a nice colorised output.
 
 
 ## Support & Liability
