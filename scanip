@@ -1,0 +1,32 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+#
+# A shell over the linux nmap command, with colorised output.
+#
+# Scans IP addresses on the local network.
+#
+# Copyright 2020 by Murray Altheim. All rights reserved. This file is part of
+# the Robot Operating System project and is released under the "Apache Licence, 
+# Version 2.0". Please see the LICENSE file included as part of this package.
+#
+# author:   Murray Altheim
+# created:  2021-02-11
+# modified: 2021-02-03
+#
+
+import os, sys, subprocess
+from colorama import init, Fore, Style
+init()
+
+print(Fore.CYAN + Style.DIM + '-- scanning IP addresses...' + Style.RESET_ALL)
+command = 'nmap -sn 192.168.1.0/24'
+print(Fore.CYAN + Style.DIM + '-- command: \"{}\"...\n'.format(command) + Style.RESET_ALL)
+
+proc = subprocess.Popen([command], stdout=subprocess.PIPE,universal_newlines=True, shell=True)
+count = 0
+for line in proc.stdout:
+    count += 1
+    _line = str(line).strip()
+    print(Fore.CYAN + Style.NORMAL + '{}'.format(_line) + Style.RESET_ALL)
+
+print(Fore.CYAN + Style.DIM + '\n-- complete: {:d} lines returned.'.format(count) + Style.RESET_ALL)
