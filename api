@@ -12,8 +12,9 @@
 # Prints the classes, methods and functions of a script, in color. Requires colorama.
 #
 # Usage:
-#     python3 api.py <filename.py>
-#     micropython api.py <filename.py>
+#
+#     python3 api <filename.py>
+#     micropython api <filename.py>
 #
 
 import sys
