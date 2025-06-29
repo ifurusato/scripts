@@ -5,6 +5,7 @@
 * **scanip**:        scans the local network for IP addresses matching 192.168.1.*
 * **findpy**:        a command line search tool that looks for strings within *.py files and provides a colorized report
 * **findxml**:       a command line search tool that looks for strings within *.xml files and provides a colorized report
+* **api**:           prints the classes, methods and functions of a file in color (requires colorama). Works with Python or MicroPython.
 
 The two find* files are basically Python simplifying wrappers around the unix "find" command, that provide a nice colorised output.
 
